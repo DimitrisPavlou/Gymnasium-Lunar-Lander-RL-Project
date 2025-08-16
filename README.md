@@ -1,15 +1,51 @@
-# Gymnasium-Lunar-Lander-RL-Project
-This is a reinforcement learning project, that solves the discrete and continuous Lunar Lander Environment from the Gymnasium library from OpenAI. 
+## 🚀 Project Overview
 
-I have implemented many of the basic RL Agents that work for both the discrete and continuous version of the environment. More specifically I implemented the following: 
-i) DQN and DDQN 
-ii) Dueling DQN and Dueling DDQN
-iii) A2C 
-iv) PPO
-v) DDPG
+This project focuses on **Reinforcement Learning (RL)** and provides implementations of several fundamental RL agents to solve both the **discrete** and **continuous** versions of the **Lunar Lander environment** from the [Gymnasium](https://gymnasium.farama.org/) library by OpenAI.  
 
-There are also two types of memory buffers: 
-i) The traditional Random Replay Buffer 
-ii) Prioritized Experience Replay
+---
 
-The final addition to the project is a Rule Extaction Algorithm. The main goal is to use a pre-trained agent and run the environent on the pre-trained agent. While running the environment we collect experiences and create a dataset from them. We then use this dataset to train a simple machine learning model like a Decision Tree (this can be another more complex model like a simple MLP) and show that the decision tree when trained with the extracted rules achieves similar performance with the pre-trained agent. The tree is used only in the discrete environment case but this can be generalized for the continuous version. 
+## 🧠 Implemented RL Agents
+
+The following agents are implemented and tested on the Lunar Lander environments:
+
+- **Value-based methods**
+  - Deep Q-Network (**DQN**)  
+  - Double Deep Q-Network (**DDQN**)  
+  - Dueling DQN  
+  - Dueling DDQN  
+
+- **Policy-based & Actor-Critic methods**
+  - Advantage Actor-Critic (**A2C**)  
+  - Proximal Policy Optimization (**PPO**)  
+  - Deep Deterministic Policy Gradient (**DDPG**)  
+
+---
+
+## 📦 Memory Buffers
+
+Two types of replay buffers are included:  
+
+1. **Uniform Replay Buffer** – traditional random sampling of experiences  
+2. **Prioritized Experience Replay (PER)** – samples experiences with higher learning potential more frequently  
+
+---
+
+## 🌳 Rule Extraction Algorithm
+
+A key addition to this project is a **Rule Extraction module** that bridges reinforcement learning and interpretable machine learning:  
+
+1. A pre-trained RL agent is run in the environment to **collect experiences**.  
+2. These experiences are used to **build a dataset** of state-action mappings.  
+3. A simple supervised model (e.g., **Decision Tree**, or optionally a small MLP) is trained on this dataset.  
+4. The resulting model achieves **similar performance** to the original RL agent while being more **interpretable**.  
+
+Currently, rule extraction is demonstrated for the **discrete Lunar Lander**, but the method can be generalized to continuous action spaces.  
+
+---
+
+## ✨ Key Features
+
+- Supports both **discrete** and **continuous** environments  
+- Multiple **RL algorithms** in a unified framework  
+- Flexible **experience replay strategies**  
+- Integration of **rule-based interpretability** into RL workflows  
