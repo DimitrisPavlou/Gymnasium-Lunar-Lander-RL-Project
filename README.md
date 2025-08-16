@@ -1,7 +1,7 @@
 # Gymnasium-Lunar-Lander-RL-Project
 This is a reinforcement learning project, that solves the discrete and continuous Lunar Lander Environment from the Gymnasium library from OpenAI. 
 
-I have implemented all the basic RL Agents that work for both the discrete and continuous version of the environment. More specifically I implemented the following: 
+I have implemented many of the basic RL Agents that work for both the discrete and continuous version of the environment. More specifically I implemented the following: 
 i) DQN and DDQN 
 ii) Dueling DQN and Dueling DDQN
 iii) A2C 
